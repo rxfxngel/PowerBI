@@ -65,6 +65,6 @@ La dimensión tiempo es muy fundamental pues nos permite saber el comportamiento
 
 
 #### Metricas
--Métrica subtotal: La métrica subtotal es el importe esto quiere decir el monto antes de aplicar IGV (impuestos) o descuentos
--Métrica cantidad: La métrica cantidad representa la cantidad de cada compra  por cada transacción. 
+- Métrica subtotal: La métrica subtotal es el importe esto quiere decir el monto antes de aplicar IGV (impuestos) o descuentos
+- Métrica cantidad: La métrica cantidad representa la cantidad de cada compra  por cada transacción. 
 
