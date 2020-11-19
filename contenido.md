@@ -49,4 +49,22 @@ La dimensión tipo venta nos brinda información  si las compras de la empresa a
 |idTipoVenta **PK IDENTITY** :key:|
 |id_tipoVenta|
 |tve_nombre|
+#### Dimensión tiempo
+La dimensión tiempo es muy fundamental pues nos permite saber el comportamiento de los datos por cada periodo de tiempo, y lo podemos clasificar por año, trimestre, mes, quincena.
+|dimtiempo|
+|---|
+|idTiempo **PK IDENTITY** :key:|
+|fecha|
+|anio|
+|nmes|
+|nombremes|
+|ndia|
+|nombredia|
+|trimestre|
+|quincena|
+
+
+#### Metricas
+-Métrica subtotal: La métrica subtotal es el importe esto quiere decir el monto antes de aplicar IGV (impuestos) o descuentos
+-Métrica cantidad: La métrica cantidad representa la cantidad de cada compra  por cada transacción. 
 
