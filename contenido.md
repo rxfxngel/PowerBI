@@ -43,6 +43,7 @@ La dimensión proveedor en el proceso de compras  nos brinda datos de nuestros p
 |nomProveedor|
 |distritoProveedor|	
 #### Dimension tipo venta
+La dimensión tipo venta nos brinda información  si las compras de la empresa a los proveedores  fueron realizadas al CONTADO, CREDITO, A 15 DIAS, A 30 DIAS, A 21 DIAS o PROFORMA
 |dimTipoVenta|
 |---|
 |idTipoVenta **PK IDENTITY** :key:|
