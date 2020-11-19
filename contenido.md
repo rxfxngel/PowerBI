@@ -24,3 +24,12 @@ El modelado dimensional se basa en HECHOS (Facts) y es una alternativa al modela
 relacional. Sus principales ventajas son:
 - Enfocado en el negocio y sus actividades
 - Permite búsquedas a gran velocidad
+
+|dimArticulo|	
+| :---: |
+|idArticulo PK IDENTITY|
+|Id_articulo|
+|nombreArticulo|
+|categoria|
+|subcategoria|
+|unidad|
