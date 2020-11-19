@@ -19,3 +19,8 @@ Un Data Mart es un almacén de datos orientado a un área específica, como por 
 |DISTRITO|	MAESTRO :blue_book:|
 |DETALLECOMPRA|	TRANSACCIONAL :chart_with_upwards_trend:|
 
+###  MODELO DIMENSIONAL
+El modelado dimensional se basa en HECHOS (Facts) y es una alternativa al modelado
+relacional. Sus principales ventajas son:
+- Enfocado en el negocio y sus actividades
+- Permite búsquedas a gran velocidad
