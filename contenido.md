@@ -27,7 +27,7 @@ relacional. Sus principales ventajas son:
 
 |dimArticulo|	
 |---|
-|idArticulo PK IDENTITY|
+|idArticulo PK IDENTITY :key:|
 |Id_articulo|
 |nombreArticulo|
 |categoria|
