@@ -9,13 +9,13 @@ Un Data Mart es un almacén de datos orientado a un área específica, como por 
 
 |TABLAS||
 | :---: | :---: |
-|ARTICULO|	MAESTRO|
-|SUBLINEA|	MAESTRO|
-|LINEA|	MAESTRO|
-|UNIDAD|	MAESTRO|
-|TIPOVENTA|	MAESTRO|
-|COMPRA|	TRANSACCIONAL|
-|PROVEEDOR|	MAESTRO|
-|DISTRITO|	MAESTRO|
-|DETALLECOMPRA|	TRANSACCIONAL|
+|ARTICULO|	MAESTRO :blue_book:|
+|SUBLINEA|	MAESTRO :blue_book:|
+|LINEA|	MAESTRO :blue_book:|
+|UNIDAD|	MAESTRO :blue_book:|
+|TIPOVENTA|	MAESTRO :blue_book:|
+|COMPRA|	TRANSACCIONAL :chart_with_upwards_trend:|
+|PROVEEDOR|	MAESTRO :blue_book:|
+|DISTRITO|	MAESTRO :blue_book:|
+|DETALLECOMPRA|	TRANSACCIONAL :chart_with_upwards_trend:|
 
