@@ -1,4 +1,4 @@
-# :maple_leaf::maple_leaf::maple_leaf: POWER BI
+# BUSINESS INTELLIGENCE :maple_leaf::maple_leaf::maple_leaf: POWER BI
 
 ## DATAMART
 Un Data Mart es un almacén de datos orientado a un área específica, como por ejemplo,  Ventas, Recursos Humanos u otros sectores en una organización. Por ello, también se le conoce como una base de información departamental. 
@@ -42,4 +42,10 @@ La dimensión proveedor en el proceso de compras  nos brinda datos de nuestros p
 |Id_Proveedor|
 |nomProveedor|
 |distritoProveedor|	
+#### Dimension tipo venta
+|dimTipoVenta|
+|---|
+|idTipoVenta **PK IDENTITY** :key:|
+|id_tipoVenta|
+|tve_nombre|
 
