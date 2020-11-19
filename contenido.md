@@ -26,7 +26,7 @@ relacional. Sus principales ventajas son:
 - Permite búsquedas a gran velocidad
 
 |dimArticulo|	
-| :---: |
+|---|
 |idArticulo PK IDENTITY|
 |Id_articulo|
 |nombreArticulo|
