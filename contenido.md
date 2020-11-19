@@ -99,4 +99,41 @@ id_tipoVenta varchar(100),
 tve_nombre  varchar (100)
 )
 ```
-
+Tabla dimTiempo
+```sql
+create table dimTiempo(
+idTiempo int identity primary key not null,
+fecha datetime,
+anio int,
+nmes int,
+nombremes varchar(20),
+ndia int,
+nombredia varchar(30),
+trimestre int,
+quincena int
+)
+```
+Tabla dimProveedor
+```sql
+create table dimProveedor(
+idProveedor int identity  primary key not null,
+Id_Proveedor char(8),
+nomProveedor varchar(100),
+distritoProveedor varchar(100)
+)
+```
+Tabla factCompras
+```sql
+CREATE TABLE factCompras(
+idProveedor int,
+idArticulo int,
+idTipoVenta int,
+idTiempo int,
+cantidad decimal(10,2),
+subTotal decimal(10,2)
+)
+alter table factCompras add constraint fk1 foreign key (idProveedor) references dimProveedor(idProveedor)
+alter table factCompras add constraint fk2 foreign key (idArticulo) references dimArticulo(idArticulo)
+alter table factCompras add constraint fk3 foreign key (idTipoVenta) references dimTipoVenta(idTipoVenta)
+alter table factCompras add constraint fk4 foreign key (idTiempo) references dimTiempo(idTiempo)
+```
