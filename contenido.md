@@ -1,3 +1,4 @@
 # :maple_leaf::maple_leaf::maple_leaf: POWER BI
 
-- Tabla <img alt="java 8 and prio java 8  array review example" src="img/Captura.PNG">
+## DATAMART
+Un Data Mart es un almacén de datos orientado a un área específica, como por ejemplo,  Ventas, Recursos Humanos u otros sectores en una organización. Por ello, también se le conoce como una base de información departamental. 
