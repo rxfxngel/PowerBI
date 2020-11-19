@@ -3,7 +3,7 @@
 ## DATAMART
 Un Data Mart es un almacén de datos orientado a un área específica, como por ejemplo,  Ventas, Recursos Humanos u otros sectores en una organización. Por ello, también se le conoce como una base de información departamental. 
 
-### DATAMART DE COMPRAS
+## DATAMART DE COMPRAS
 > Esquema de base de datos:
 <img src="img/cap1.png" width="50%">
 
@@ -19,12 +19,12 @@ Un Data Mart es un almacén de datos orientado a un área específica, como por 
 |DISTRITO|	MAESTRO :blue_book:|
 |DETALLECOMPRA|	TRANSACCIONAL :chart_with_upwards_trend:|
 
-###  MODELO DIMENSIONAL
+##  MODELO DIMENSIONAL
 El modelado dimensional se basa en HECHOS (Facts) y es una alternativa al modelado
 relacional. Sus principales ventajas son:
 - Enfocado en el negocio y sus actividades
 - Permite búsquedas a gran velocidad
-#### Dimension articulo
+## Dimension articulo
 La dimensión artículo nos brinda información acerca de los artículos más comprados por la empresa se agregó los campos de categoría subcategoría y unidad para hacer una mejor clasificación y ver el comportamiento de los datos.
 |dimArticulo|	
 |---|
@@ -34,7 +34,7 @@ La dimensión artículo nos brinda información acerca de los artículos más co
 |categoria|
 |subcategoria|
 |unidad|
-#### Dimension proveedor
+## Dimension proveedor
 La dimensión proveedor en el proceso de compras  nos brinda datos de nuestros proveedores agregando el campo distrito para poder clasificarlos, es muy útil esta dimensión para ver el comportamiento de los proveedores .
 |dimProveedor|		
 |---|
@@ -42,14 +42,14 @@ La dimensión proveedor en el proceso de compras  nos brinda datos de nuestros p
 |Id_Proveedor|
 |nomProveedor|
 |distritoProveedor|	
-#### Dimension tipo venta
+## Dimension tipo venta
 La dimensión tipo venta nos brinda información  si las compras de la empresa a los proveedores  fueron realizadas al CONTADO, CREDITO, A 15 DIAS, A 30 DIAS, A 21 DIAS o PROFORMA
 |dimTipoVenta|
 |---|
 |idTipoVenta **PK IDENTITY** :key:|
 |id_tipoVenta|
 |tve_nombre|
-#### Dimensión tiempo
+## Dimensión tiempo
 La dimensión tiempo es muy fundamental pues nos permite saber el comportamiento de los datos por cada periodo de tiempo, y lo podemos clasificar por año, trimestre, mes, quincena.
 |dimtiempo|
 |---|
@@ -64,7 +64,7 @@ La dimensión tiempo es muy fundamental pues nos permite saber el comportamiento
 |quincena|
 
 
-#### Metricas
+## Metricas
 - Métrica subtotal: La métrica subtotal es el importe esto quiere decir el monto antes de aplicar IGV (impuestos) o descuentos
 - Métrica cantidad: La métrica cantidad representa la cantidad de cada compra  por cada transacción. 
 
