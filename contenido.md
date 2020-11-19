@@ -140,9 +140,9 @@ alter table factCompras add constraint fk4 foreign key (idTiempo) references dim
 
 # CARGA ETL usando SSIS
 
-## DELETE FROM dimProveedor
-
+## Limpiar Tablas
 ```sql
+DELETE FROM dimProveedor
 DELETE FROM dimArticulo
 DELETE FROM dimTipoVenta
 DELETE FROM dimTiempo
