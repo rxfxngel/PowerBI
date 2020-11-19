@@ -142,6 +142,7 @@ alter table factCompras add constraint fk4 foreign key (idTiempo) references dim
 
 ## Tarea limpiar Tablas
 <img src="img/cap2.png">
+
 ```sql
 DELETE FROM dimProveedor
 DELETE FROM dimArticulo
