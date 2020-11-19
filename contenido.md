@@ -8,7 +8,7 @@ Un Data Mart es un almacén de datos orientado a un área específica, como por 
 <img src="img/cap1.png">
 
 |TABLAS||
-| :---: | :---: |
+|---|---|
 |ARTICULO|	MAESTRO :blue_book:|
 |SUBLINEA|	MAESTRO :blue_book:|
 |LINEA|	MAESTRO :blue_book:|
