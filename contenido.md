@@ -154,4 +154,4 @@ DBCC CHECKIDENT (dimTipoVenta, RESEED, 0)
 DBCC CHECKIDENT (dimTiempo, RESEED, 0)
 DBCC CHECKIDENT (factCompras, RESEED, 0)
 ```
-<img src="img/cap2.png" width="50%">
+<img src="img/cap2.png">
