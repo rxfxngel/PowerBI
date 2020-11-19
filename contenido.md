@@ -86,8 +86,8 @@ create table  dimArticulo(
 idArticulo int identity primary key not null ,
 Id_articulo char(10) NOT NULL,
 nombreArticulo varchar(60) ,
-categoria varchar(50),
-subcategoria varchar(50),
+categoria varchar(80),
+subcategoria varchar(80),
 unidad varchar(30)
 )
 ```
