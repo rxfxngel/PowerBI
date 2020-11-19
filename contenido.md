@@ -34,3 +34,12 @@ La dimensión artículo nos brinda información acerca de los artículos más co
 |categoria|
 |subcategoria|
 |unidad|
+#### Dimension proveedor
+La dimensión proveedor en el proceso de compras  nos brinda datos de nuestros proveedores agregando el campo distrito para poder clasificarlos, es muy útil esta dimensión para ver el comportamiento de los proveedores .
+|dimProveedor|		
+|---|
+|idProveedor **PK IDENTITY** :key:|	
+|Id_Proveedor|
+|nomProveedor|
+|distritoProveedor|	
+
