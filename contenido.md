@@ -79,4 +79,17 @@ La dimensión tiempo es muy fundamental pues nos permite saber el comportamiento
 |cantidad|
 |subtotal|
 
+## Creacion de base de datos multidimencional
+
+```sql
+create table  dimArticulo(
+idArticulo int identity primary key not null ,
+Id_articulo char(10) NOT NULL,
+nombreArticulo varchar(60) ,
+categoria varchar(50),
+subcategoria varchar(50),
+unidad varchar(30)
+)
+```
+
 
