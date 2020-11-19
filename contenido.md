@@ -137,3 +137,20 @@ alter table factCompras add constraint fk2 foreign key (idArticulo) references d
 alter table factCompras add constraint fk3 foreign key (idTipoVenta) references dimTipoVenta(idTipoVenta)
 alter table factCompras add constraint fk4 foreign key (idTiempo) references dimTiempo(idTiempo)
 ```
+
+# CARGA ETL usando SSIS
+
+## DELETE FROM dimProveedor
+
+```sql
+DELETE FROM dimArticulo
+DELETE FROM dimTipoVenta
+DELETE FROM dimTiempo
+DELETE FROM factCompras
+
+DBCC CHECKIDENT (dimProveedor, RESEED, 0)
+DBCC CHECKIDENT (dimArticulo, RESEED, 0)
+DBCC CHECKIDENT (dimTipoVenta, RESEED, 0)
+DBCC CHECKIDENT (dimTiempo, RESEED, 0)
+DBCC CHECKIDENT (factCompras, RESEED, 0)
+```
