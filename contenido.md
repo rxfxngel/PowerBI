@@ -24,7 +24,8 @@ El modelado dimensional se basa en HECHOS (Facts) y es una alternativa al modela
 relacional. Sus principales ventajas son:
 - Enfocado en el negocio y sus actividades
 - Permite búsquedas a gran velocidad
-
+#### Dimension articulo
+La dimensión artículo nos brinda información acerca de los artículos más comprados por la empresa se agregó los campos de categoría subcategoría y unidad para hacer una mejor clasificación y ver el comportamiento de los datos.
 |dimArticulo|	
 |---|
 |idArticulo **PK IDENTITY** :key:|
