@@ -155,3 +155,6 @@ DBCC CHECKIDENT (dimArticulo, RESEED, 0)
 DBCC CHECKIDENT (dimTipoVenta, RESEED, 0)
 DBCC CHECKIDENT (dimTiempo, RESEED, 0)
 ```
+
+## Tarea cargar dimensiones
+
