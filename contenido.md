@@ -207,3 +207,20 @@ inner join cowapi..DISTRITO D on D.CodigoPostal=P.CodigoPostal
 ## Tarea llenar tabla hechos
 
 <img src="img/cap9.png">
+
+## Subtareas de la tarea llenar tabla hechos
+
+<img src="img/cap10.png">
+
+> consulta sql para llenar la tabla hechos
+```sql
+SELECT P.idProveedor,A.idArticulo,TV.idTipoVenta,T.idTiempo,DT.Cantidad,DT.SubTotal FROM
+(SELECT Id_Proveedor,Id_Articulo,Id_tipoventa,FechaFactura,Cantidad,SubTotal FROM 
+cowapi..COMPRA C 
+INNER JOIN cowapi..DETALLE_COMPRA DC ON  (DC.RucEmpresa+'-'+DC.Id_TipoDocu+'-'+DC.SerieFactura+'-'+DC.NumeroFactura)=(C.RucEmpresa+'-'+C.Id_TipoDocu+'-'+C.SerieFactura+'-'+C.NumeroFactura))DT
+INNER JOIN dimProveedor P ON P.Id_Proveedor=DT.Id_Proveedor
+INNER JOIN dimArticulo A ON A.Id_articulo=DT.Id_Articulo
+INNER JOIN dimTipoVenta TV ON TV.id_tipoVenta=DT.Id_tipoventa
+INNER JOIN dimTiempo T ON T.fecha=DT.FechaFactura
+```
+
