@@ -159,3 +159,7 @@ DBCC CHECKIDENT (dimTiempo, RESEED, 0)
 ## Tarea cargar dimensiones
 
 <img src="img/cap5.png">
+
+## Subtareas de cargar dimensiones
+
+<img src="img/cap6.png">
