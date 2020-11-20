@@ -141,7 +141,7 @@ alter table factCompras add constraint fk4 foreign key (idTiempo) references dim
 # CARGA ETL usando SSIS
 
 ## Tarea limpiar Tablas
-<img src="img/cap2.png">
+<img src="img/cap4.png">
 
 ```sql
 DELETE FROM dimProveedor
