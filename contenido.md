@@ -200,3 +200,6 @@ select P.Id_Proveedor,P.Pro_Nombre, D.NombreDistrito
 from cowapi..PROVEEDOR P
 inner join cowapi..DISTRITO D on D.CodigoPostal=P.CodigoPostal
 ```
+## Enlace de dimensiones con origen
+
+<img src="img/cap8.png">
