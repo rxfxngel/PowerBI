@@ -169,7 +169,9 @@ DBCC CHECKIDENT (dimTiempo, RESEED, 0)
 
 > Dimension Articulo
 ```sql
-SELECT A.Id_Articulo,a.Art_Nombre as 'nombre',L.Lin_nombre as 'categoria',SL.Sub_nombre as 'subcategoria',U.Uni_Nombre as 'unidad'
+SELECT A.Id_Articulo,a.Art_Nombre as 'nombre',
+L.Lin_nombre as 'categoria',SL.Sub_nombre as 'subcategoria',
+U.Uni_Nombre as 'unidad'
 FROM cowapi..ARTICULO A 
 INNER JOIN cowapi..SUBLINEA SL ON SL.Id_SubLinea=A.Id_SubLinea
 INNER JOIN cowapi..LINEA L ON L.Id_Linea =SL.Id_Linea
