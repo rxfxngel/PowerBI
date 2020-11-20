@@ -226,3 +226,7 @@ INNER JOIN dimTiempo T ON T.fecha=DT.FechaFactura
 ## Ejecucion de tareas
 
 <img src="img/cap11.png">
+
+## Power BI dashboard
+
+<img src="img/cap12.png">
