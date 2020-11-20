@@ -163,3 +163,38 @@ DBCC CHECKIDENT (dimTiempo, RESEED, 0)
 ## Subtareas de cargar dimensiones
 
 <img src="img/cap6.png">
+
+## Origen de dimensiones
+<img src="img/cap7.png">
+
+> Dimension Articulo
+```sql
+SELECT A.Id_Articulo,a.Art_Nombre as 'nombre',L.Lin_nombre as 'categoria',SL.Sub_nombre as 'subcategoria',U.Uni_Nombre as 'unidad'
+FROM cowapi..ARTICULO A 
+INNER JOIN cowapi..SUBLINEA SL ON SL.Id_SubLinea=A.Id_SubLinea
+INNER JOIN cowapi..LINEA L ON L.Id_Linea =SL.Id_Linea
+INNER JOIN cowapi..UNIDAD U ON U.Id_Unidad=A.Id_Unidad
+```
+> Dimension tipo venta
+```sql
+select Id_tipoventa,tve_nombre from cowapi..TIPOVENTA
+```
+> Dimension tiempo
+```sql
+select distinct FechaFactura fecha ,
+YEAR(FechaFactura) anio,
+MONTH(FechaFactura) mes,
+DATENAME(month,FechaFactura) nombremes,
+DAY(FechaFactura) dia,
+DATENAME(WEEKDAY,FechaFactura) nombredia,
+DATEPART(QUARTER,FechaFactura) trimestre,
+case when DAY(FechaFactura)<=15 then 1 else 2 end quincena
+from cowapi..COMPRA
+
+```
+> Dimension proveedor
+```sql
+select P.Id_Proveedor,P.Pro_Nombre, D.NombreDistrito
+from cowapi..PROVEEDOR P
+inner join cowapi..DISTRITO D on D.CodigoPostal=P.CodigoPostal
+```
