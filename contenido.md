@@ -172,14 +172,14 @@ DBCC CHECKIDENT (dimTiempo, RESEED, 0)
 SELECT A.Id_Articulo,a.Art_Nombre as 'nombre',
 L.Lin_nombre as 'categoria',SL.Sub_nombre as 'subcategoria',
 U.Uni_Nombre as 'unidad'
-FROM cowapi..ARTICULO A 
-INNER JOIN cowapi..SUBLINEA SL ON SL.Id_SubLinea=A.Id_SubLinea
-INNER JOIN cowapi..LINEA L ON L.Id_Linea =SL.Id_Linea
-INNER JOIN cowapi..UNIDAD U ON U.Id_Unidad=A.Id_Unidad
+FROM cowapi_2008..ARTICULO A 
+INNER JOIN cowapi_2008..SUBLINEA SL ON SL.Id_SubLinea=A.Id_SubLinea
+INNER JOIN cowapi_2008..LINEA L ON L.Id_Linea =SL.Id_Linea
+INNER JOIN cowapi_2008..UNIDAD U ON U.Id_Unidad=A.Id_Unidad
 ```
 > Dimension tipo venta
 ```sql
-select Id_tipoventa,tve_nombre from cowapi..TIPOVENTA
+select Id_tipoventa,tve_nombre from cowapi_2008..TIPOVENTA
 ```
 > Dimension tiempo
 ```sql
@@ -191,14 +191,14 @@ DAY(FechaFactura) dia,
 DATENAME(WEEKDAY,FechaFactura) nombredia,
 DATEPART(QUARTER,FechaFactura) trimestre,
 case when DAY(FechaFactura)<=15 then 1 else 2 end quincena
-from cowapi..COMPRA
+from cowapi_2008..COMPRA
 
 ```
 > Dimension proveedor
 ```sql
 select P.Id_Proveedor,P.Pro_Nombre, D.NombreDistrito
-from cowapi..PROVEEDOR P
-inner join cowapi..DISTRITO D on D.CodigoPostal=P.CodigoPostal
+from cowapi_2008..PROVEEDOR P
+inner join cowapi_2008..DISTRITO D on D.CodigoPostal=P.CodigoPostal
 ```
 ## Enlace de dimensiones con origen
 
@@ -216,8 +216,8 @@ inner join cowapi..DISTRITO D on D.CodigoPostal=P.CodigoPostal
 ```sql
 SELECT P.idProveedor,A.idArticulo,TV.idTipoVenta,T.idTiempo,DT.Cantidad,DT.SubTotal FROM
 (SELECT Id_Proveedor,Id_Articulo,Id_tipoventa,FechaFactura,Cantidad,SubTotal FROM 
-cowapi..COMPRA C 
-INNER JOIN cowapi..DETALLE_COMPRA DC ON  (DC.RucEmpresa+'-'+DC.Id_TipoDocu+'-'+DC.SerieFactura+'-'+DC.NumeroFactura)=(C.RucEmpresa+'-'+C.Id_TipoDocu+'-'+C.SerieFactura+'-'+C.NumeroFactura))DT
+cowapi_2008..COMPRA C 
+INNER JOIN cowapi_2008..DETALLE_COMPRA DC ON  (DC.RucEmpresa+'-'+DC.Id_TipoDocu+'-'+DC.SerieFactura+'-'+DC.NumeroFactura)=(C.RucEmpresa+'-'+C.Id_TipoDocu+'-'+C.SerieFactura+'-'+C.NumeroFactura))DT
 INNER JOIN dimProveedor P ON P.Id_Proveedor=DT.Id_Proveedor
 INNER JOIN dimArticulo A ON A.Id_articulo=DT.Id_Articulo
 INNER JOIN dimTipoVenta TV ON TV.id_tipoVenta=DT.Id_tipoventa
