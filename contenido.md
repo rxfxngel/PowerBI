@@ -223,4 +223,6 @@ INNER JOIN dimArticulo A ON A.Id_articulo=DT.Id_Articulo
 INNER JOIN dimTipoVenta TV ON TV.id_tipoVenta=DT.Id_tipoventa
 INNER JOIN dimTiempo T ON T.fecha=DT.FechaFactura
 ```
+## Ejecucion de tareas
 
+<img src="img/cap11.png">
