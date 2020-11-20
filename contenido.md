@@ -203,3 +203,7 @@ inner join cowapi..DISTRITO D on D.CodigoPostal=P.CodigoPostal
 ## Enlace de dimensiones con origen
 
 <img src="img/cap8.png">
+
+## Tarea llenar tabla hechos
+
+<img src="img/cap9.png">
