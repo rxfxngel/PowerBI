@@ -1,4 +1,4 @@
-# Cargar datos power BI (Transformar datos)
+# Cargar datos power BI (Transformar datos) :green_book: :green_book: :green_book:
 
 ## Renombrar columna
 
@@ -10,4 +10,17 @@
 ```C#
 = Table.TransformColumnTypes(dbo_DimPeriod,{{"PeriodID", type date}})
 ```
+## Filtrar datos
 
+### Sumar y Restar fechas
+
+Date.AddDays
+
+Sintaxis
+```C#
+Date.AddDays ( dateTime como cualquiera, numberOfDays como número)
+```
+Ejemplo: Restar 180 dias(3 meses) a la fecha actual
+```C#
+= Table.SelectRows(#"Changed Type", each [PeriodID] > Date.AddDays(DateTime.Date(DateTime.LocalNow()),-180))
+```
