@@ -12,9 +12,9 @@
 ```
 ## Filtrar datos
 
-### Sumar y Restar fechas
+### Funciones
 
-Date.AddDays
+Date.AddDays (Sumar y Restar fechas)
 
 Sintaxis
 ```C#
