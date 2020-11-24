@@ -14,13 +14,13 @@
 
 ### Funciones
 
-Date.AddDays (Sumar y Restar fechas)
+- Date.AddDays (Sumar y Restar fechas)
 
-Sintaxis
-```C#
-Date.AddDays ( dateTime como cualquiera, numberOfDays como número)
-```
-Ejemplo: Restar 180 dias(3 meses) a la fecha actual
-```C#
-= Table.SelectRows(#"Changed Type", each [PeriodID] > Date.AddDays(DateTime.Date(DateTime.LocalNow()),-180))
-```
+  Sintaxis
+  ```C#
+  Date.AddDays ( dateTime como cualquiera, numberOfDays como número)
+  ```
+  Ejemplo: Restar 180 dias(3 meses) a la fecha actual
+  ```C#
+  = Table.SelectRows(#"Changed Type", each [PeriodID] > Date.AddDays(DateTime.Date(DateTime.LocalNow()),-180))
+  ```
