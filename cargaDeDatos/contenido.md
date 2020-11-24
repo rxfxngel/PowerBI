@@ -24,10 +24,14 @@
   = Table.SelectRows(#"Changed Type", each [PeriodID] > Date.AddDays(DateTime.Date(DateTime.LocalNow()),-180))
   ```
 ## Agregar columna
-```C#
-= Table.AddColumn(dbo_DimPractice,"Nombre", each Text.Proper([Name]))
-```
+  ```C#
+  = Table.AddColumn(dbo_DimPractice,"Nombre", each Text.Proper([Name]))
+  ```
 ## Convertir columna a texto
-```C#
-= Table.TransformColumnTypes(AgregadoPersonalizado,{{"Nombre", type text}})
-```
+  ```C#
+  = Table.TransformColumnTypes(AgregadoPersonalizado,{{"Nombre", type text}})
+  ```
+## Filtrar  columna
+  ```C#
+  = Table.SelectRows(#"Columnas con nombre cambiado", each ([Active] = true))
+  ```
