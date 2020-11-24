@@ -20,3 +20,11 @@
   ```C#
   = Table.SelectRows(#"Changed Type", each [PeriodID] > Date.AddDays(DateTime.Date(DateTime.LocalNow()),-180))
   ```
+## Agregar columna
+```C#
+= Table.AddColumn(dbo_DimPractice,"Nombre", each Text.Proper([Name]))
+```
+## Convertir a texto
+```C#
+= Table.TransformColumnTypes(AgregadoPersonalizado,{{"Nombre", type text}})
+```
