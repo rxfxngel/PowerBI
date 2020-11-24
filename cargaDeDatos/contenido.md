@@ -5,16 +5,12 @@
 ```C#
 = Table.RenameColumns(dbo_DimDocumentType,{{"DocumentTypeID", "IdTipoDocumento"}, {"Name", "TipoDeDocumento"}})
 ```
-## Conversion de datos
-### Cambiar columna  a date (Fecha)
+## Convertir a date (Fecha)
 ```C#
 = Table.TransformColumnTypes(dbo_DimPeriod,{{"PeriodID", type date}})
 ```
-## Filtrar datos
-
-### Funciones
-
-- Date.AddDays (Sumar y Restar fechas)
+## Sumar dias
+  Date.AddDays (Sumar y Restar fechas)
 
   Sintaxis
   ```C#
