@@ -5,7 +5,7 @@
 ```C#
 = Table.RenameColumns(dbo_DimDocumentType,{{"DocumentTypeID", "IdTipoDocumento"}, {"Name", "TipoDeDocumento"}})
 ```
-## Convertir a date (Fecha)
+## Convertir columna a date (Fecha)
 ```C#
 = Table.TransformColumnTypes(dbo_DimPeriod,{{"PeriodID", type date}})
 ```
@@ -24,7 +24,7 @@
 ```C#
 = Table.AddColumn(dbo_DimPractice,"Nombre", each Text.Proper([Name]))
 ```
-## Convertir a texto
+## Convertir columna a texto
 ```C#
 = Table.TransformColumnTypes(AgregadoPersonalizado,{{"Nombre", type text}})
 ```
