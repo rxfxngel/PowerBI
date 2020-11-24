@@ -5,6 +5,9 @@
 ```C#
 = Table.RenameColumns(dbo_DimDocumentType,{{"DocumentTypeID", "IdTipoDocumento"}, {"Name", "TipoDeDocumento"}})
 ```
+```C#
+= Table.RenameColumns(#"Tipo cambiado",{{"Nombre", "Cliente"}, {"PracticeID", "IdCliente"}})
+```
 ## Convertir columna a date (Fecha)
 ```C#
 = Table.TransformColumnTypes(dbo_DimPeriod,{{"PeriodID", type date}})
